@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kriptovaluta Profit Kalkulátor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kriptovaluta Profit Kalkulátor</h1>
+        
+        <div class="form-group">
+            <label for="positionType">Pozíció típusa:</label>
+            <select id="positionType">
+                <option value="long">Long (Vétel)</option>
+                <option value="short">Short (Eladás)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="entryPrice">Beszálló Ár (USD-ben):</label>
+            <input type="number" id="entryPrice" placeholder="Pl. 25000" step="any">
+        </div>
+
+        <div class="form-group">
+            <label for="targetPrice">Cél Ár (USD-ben):</label>
+            <input type="number" id="targetPrice" placeholder="Pl. 28000" step="any">
+        </div>
+
+        <div class="form-group">
+            <label for="stopLossPrice">Stop Loss Ár (USD-ben):</label>
+            <input type="number" id="stopLossPrice" placeholder="Pl. 24000" step="any">
+        </div>
+
+        <button id="calculate">Kalkulálás</button>
+
+        <div id="result" class="result hidden">
+            <h3>Risk/Reward Arány: <span id="riskReward"></span></h3>
+            <h3>Kockázat: <span id="risk"></span> USD</h3>
+            <h3>Potenciális Nyereség: <span id="reward"></span> USD</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
